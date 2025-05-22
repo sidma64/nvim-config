@@ -256,6 +256,8 @@ return {
         ["nushell"] = {},
         ["taplo"] = {},
         ["yamlls"] = {},
+        ["rust_analyzer"] = {},
+        ["graphql"] = {},
       }
       local default_config = {}
       for name, config in pairs(configs) do

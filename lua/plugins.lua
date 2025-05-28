@@ -315,7 +315,7 @@ return {
   { "williamboman/mason.nvim",     opts = {}, dependencies = { "williamboman/mason-lspconfig.nvim" } },
   {
     "neovim/nvim-lspconfig",
-    dependencies = { "saghen/blink.cmp" },
+    dependencies = { "saghen/blink.cmp", "b0o/schemastore.nvim" },
     config = function()
       local configs = {
         ["racket_langserver"] = {},

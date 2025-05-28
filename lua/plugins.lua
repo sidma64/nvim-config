@@ -321,6 +321,7 @@ return {
         ["racket_langserver"] = {},
         ["lua_ls"] = {},
         ["clangd"] = {},
+        ["cmake"] = {},
         ["pyright"] = {},
         ["hyprls"] = {},
         ["ts_ls"] = {},

@@ -1,4 +1,5 @@
 return {
+  "b0o/schemastore.nvim",
   {
     "folke/trouble.nvim",
     opts = {}, -- for default options, refer to the configuration section for custom setup.
@@ -324,12 +325,32 @@ return {
         ["hyprls"] = {},
         ["ts_ls"] = {},
         ["html"] = {},
-        ["jsonls"] = {},
+        ["jsonls"] = {
+          settings = {
+            json = {
+              schemas = require('schemastore').json.schemas(),
+              validate = { enable = true },
+            },
+          },
+        },
         ["gopls"] = {},
         ["nixd"] = {},
         ["nushell"] = {},
         ["taplo"] = {},
-        ["yamlls"] = {},
+        ["yamlls"] = {
+          settings = {
+            yaml = {
+              schemaStore = {
+                -- You must disable built-in schemaStore support if you want to use
+                -- this plugin and its advanced options like `ignore`.
+                enable = false,
+                -- Avoid TypeError: Cannot read properties of undefined (reading 'length')
+                url = "",
+              },
+              schemas = require('schemastore').yaml.schemas(),
+            },
+          },
+        },
         ["rust_analyzer"] = {},
         ["graphql"] = {},
       }

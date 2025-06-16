@@ -89,16 +89,16 @@ end
 --   vim.g.terminal_color_15 = "#a6adc8"
 -- end
 -- Hyprlang LSP
-vim.api.nvim_create_autocmd({ "BufEnter", "BufWinEnter" }, {
-  pattern = { "*.hl", "hypr*.conf" },
-  callback = function(event)
-    print(string.format("starting hyprls for %s", vim.inspect(event)))
-    vim.lsp.start({
-      name = "hyprlang",
-      cmd = { "hyprls" },
-      root_dir = vim.fn.getcwd(),
-    })
-  end,
-})
+-- vim.api.nvim_create_autocmd({ "BufEnter", "BufWinEnter" }, {
+--   pattern = { "*.hl", "hypr*.conf" },
+--   callback = function(event)
+--     print(string.format("starting hyprls for %s", vim.inspect(event)))
+--     vim.lsp.start({
+--       name = "hyprlang",
+--       cmd = { "hyprls" },
+--       root_dir = vim.fn.getcwd(),
+--     })
+--   end,
+-- })
 -- vim.diagnostic.config({ virtual_lines = true })
 vim.diagnostic.config({ virtual_text = true })
